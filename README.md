@@ -11,8 +11,8 @@ You can just run `npm start`
 
 I also created a docker file for fun.
 
-    - `cp Dockerfile.sample Dockerfile`
-    - modify with your slack token
-    - `docker build -t <yourname>/truck-tracker`
-    - `docker run -d <yourname>/truck-tracker`
+  - `cp Dockerfile.sample Dockerfile`
+  - modify with your slack token
+  - `docker build -t <yourname>/truck-tracker`
+  - `docker run -d <yourname>/truck-tracker`
 
