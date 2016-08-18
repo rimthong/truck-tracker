@@ -1,0 +1,17 @@
+{
+  "name": "truck-scraper",
+  "version": "1.0.0",
+  "description": "Scraping food truck data",
+  "main": "scrape.js",
+  "scripts": {
+    "start": "node scrape.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "botkit": "^0.2.2",
+    "cheerio": "^0.20.0",
+    "moment": "^2.14.1",
+    "request": "^2.74.0"
+  }
+}

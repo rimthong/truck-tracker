@@ -1,0 +1,17 @@
+FROM node:argon
+
+# Set token
+ENV SLACK_TOKEN xxx
+
+# Create app directory
+RUN mkdir -p /usr/src/trucktracker
+WORKDIR /usr/src/trucktracker
+
+# Install app dependencies
+COPY package.json /usr/src/trucktracker/
+RUN npm install
+
+# Bundle app source
+COPY scrape.js /usr/src/trucktracker
+
+CMD [ "npm", "start" ]
