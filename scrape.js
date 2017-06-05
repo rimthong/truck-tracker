@@ -19,21 +19,21 @@ bot.startRTM(function(err,bot,payload) {
 });
 
 let montrealTrucks = function(date, callback){
-	request(url, function(error, response, html){
-		if(!error){
-			let $ = cheerio.load(html);
-			let trucks = [];
-			$('.box .row-horaire').each( function(i, elem) {
-				if($(this).find('.long-date').text().indexOf(date.locale('fr').format('LL')) != -1){
-					trucks.push(` - ${$(this).find('a').text()} (${baseUrl}${$(this).find('a').attr('href')})`);
-				}
-			});
-  		callback(null, trucks);
-		}
-		else {
-			callback(error);
-		}
-	});
+  request(url, function(error, response, html){
+    if(!error){
+      let $ = cheerio.load(html);
+      let trucks = [];
+      $('.box .row-horaire').each( function(i, elem) {
+        if($(this).find('.long-date').text().indexOf(date.locale('fr').format('LL')) != -1){
+          trucks.push(` - ${$(this).find('a').text()} (${baseUrl}${$(this).find('a').attr('href')})`);
+        }
+      });
+      callback(null, trucks);
+    }
+    else {
+      callback(error);
+    }
+  });
 };
 
 let buildMessage = (result, keyword) => {
