@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "botkit": "^0.2.2",
+    "botkit": "^0.7.5",
     "cheerio": "^0.20.0",
     "moment": "^2.14.1",
     "request": "^2.74.0"
